@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIV Risk Assessment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .feature-name {
+            font-weight: bold;
+            color: #007bff;
+        }
+        .question {
+            margin-bottom: 10px;
+        }
+        .btn-group label {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 0;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="card shadow-lg p-4">
+            <h2 class="text-center mb-4">HIV RISK PREDICTION</h2>
+            <p class="text-center">Please answer the following questions to assess your HIV risk level.</p>
+            <form id="riskForm">
+                
+                <!-- Age -->
+                <div class="mb-3">
+                    <p class="feature-name">age</p>
+                    <p class="question">What is your age?</p>
+                    <input type="number" class="form-control" id="age" name="age" min="1" required>
+                </div>
+                
+                <!-- Marital Status -->
+                <div class="mb-3">
+                    <p class="feature-name">marital staus</p>
+                    <p class="question">What is your marital staus?</p>
+                    <select class="form-select" id="marital staus"  name="marital staus" required>
+                        <option value="">Select</option>
+                        <option value="divorced">divorced</option>
+                        <option value="married">married</option>
+                        <option value="unmarried">unnmarried</option>
+                        <option value="cohabiting">cohabiting</option>
+                    </select>
+                </div>
+                
+                <!-- STD -->
+                <div class="mb-3">
+                    <p class="feature-name">std </p>
+                    <p class="question">Have you ever been diagnosed with an std?</p>
+                    <div class="btn-group" role="group">
+                        <input type="radio" class="btn-check" name="std" id="std_yes" value="yes" required>
+                        <label class="btn btn-outline-danger" for="std_yes">yes</label>
+                        <input type="radio" class="btn-check" name="std" id="std_no" value="no" required>
+                        <label class="btn btn-outline-success" for="std_no">no</label>
+                    </div>
+                </div>
+                
+                <!-- Educational Background -->
+                <div class="mb-3">
+                    <p class="feature-name">educational background</p>
+                    <p class="question">What is your highest level of education?</p>
+                    <select class="form-select" id="educational background" name="educational background" required>
+                        <option value="">Select</option>
+                        <option value="college degree">college degree</option>
+                        <option value="senior high school">senior high school</option>
+                        <option value="junior high school">junior high school</option>
+                        <option value="illiteracy">illiteracy</option>
+                    </select>
+                </div>
+                
+                <!-- HIV Test in the Past Year -->
+                <div class="mb-3">
+                    <p class="feature-name">hiv test in past year</p>
+                    <p class="question">Have you taken an hiv test in the past year?</p>
+                    <div class="btn-group" role="group">
+                        <input type="radio" class="btn-check" name="hiv test in past year" id="hiv test in past year_yes" value="yes" required>
+                        <label class="btn btn-outline-danger" for="hiv test in past year_yes">yes</label>
+                        <input type="radio" class="btn-check" name="hiv test in past year" id="hiv test in past year_no" value="no" required>
+                        <label class="btn btn-outline-success" for="hiv test in past year_no">no</label>
+                    </div>
+                </div>
+                
+                <!-- AIDS Education -->
+                <div class="mb-3">
+                    <p class="feature-name">aids education</p>
+                    <p class="question">Have you received aids education?</p>
+                    <div class="btn-group" role="group">
+                        <input type="radio" class="btn-check" name="aids education" id="aids education_yes" value="yes" required>
+                        <label class="btn btn-outline-danger" for="aids education_yes">yes</label>
+                        <input type="radio" class="btn-check" name="aids education" id="aids education_no" value="no" required>
+                        <label class="btn btn-outline-success" for="aids education_no">no</label>
+                    </div>
+                </div>
+                
+                <!-- Places of Seeking Partners -->
+                <div class="mb-3">
+                    <p class="feature-name">places of seeking sex partners</p>
+                    <p class="question">Where do you usually seek partners?</p>
+                    <select class="form-select" id="places of seeking sex partners" name="places of seeking sex partners" required>
+                        <option value="">Select</option>
+                        <option value="bar">bar</option>
+                        <option value="park">park</option>
+                        <option value="internet">internet</option>
+                        <option value="public bath">public bath</option>
+                        <option value="others">others</option>
+                    </select>
+                </div>
+                
+                <!-- Sexual Orientation -->
+                <div class="mb-3">
+                    <p class="feature-name">sexual orientation</p>
+                    <p class="question">What is your sexual orientation?</p>
+                    <select class="form-select" id="sexual orientation" name="sexual orientation" required>
+                        <option value="">Select</option>
+                        <option value="heterosexual">heterosexual</option>
+                        <option value="bisexual">bisexual</option>
+                        <option value="homosexual">homosexual</option>
+                    </select>
+                </div>
+                
+                <!-- Drug Use -->
+                <div class="mb-3">
+                    <p class="feature-name">drug- taking</p>
+                    <p class="question">Do you use drugs?</p>
+                    <div class="btn-group" role="group">
+                        <input type="radio" class="btn-check" name="drug- taking" id="drug- taking_yes" value="yes" required>
+                        <label class="btn btn-outline-danger" for="drug- taking_yes">yes</label>
+                        <input type="radio" class="btn-check" name="drug- taking" id="drug- taking_no" value="no" required>
+                        <label class="btn btn-outline-success" for="drug- taking_no">no</label>
+                    </div>
+                </div>
+                
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary w-100">Assess Risk</button>
+            </form>
+
+            <!-- Prediction Output -->
+            <div class="mt-4 text-center">
+                <h4>Predicted Risk: <span id="result" class="fw-bold text-danger"></span></h4>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript to Handle Form Submission -->
+    <script>
+       document.getElementById("riskForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    let formData = new URLSearchParams(new FormData(this));
+
+    fetch("/predict", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.error) {
+            alert("Error: " + data.error);
+        } else {
+            document.getElementById("result").textContent = data.Prediction;  // Fixed key name
+        }
+    })
+    .catch(error => console.error("Error:", error));
+});
+        </script>
+        
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
